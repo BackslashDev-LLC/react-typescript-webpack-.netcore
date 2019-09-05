@@ -3,6 +3,22 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>The app is working!</p>
+    @*<script src="@Url.Content("~/js/test.jsx")"></script>*@
+    @*<script src="@Url.Content("~/Views/react/testComponent/test.tsx")"></script>*@
 </div>
+
+<script src="@Url.Content("~/dist/runtime.js")"></script>
+<script src="@Url.Content("~/dist/vendor.js")"></script>
+<script src="@Url.Content("~/dist/vendor.js")"></script>
+
+
+@*<script src="@Url.Content("~/Views/react/testComponent/test.tsx")"></script>*@
+
+@*@Scripts.Render("~/wwwroot/dist/runtime.js")
+    @Scripts.Render("~/wwwroot/dist/vendor.js")
+    @Scripts.Render("~/wwwroot/dist/vendor.js")*@
+
+<!-- Render the code to initialise the component -->
+@Html.React("TestComponent", new { })
+@Html.ReactInitJavaScript()

@@ -9,6 +9,10 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using JavaScriptEngineSwitcher.Extensions.MsDependencyInjection;
+using React.AspNet;
+using JavaScriptEngineSwitcher.ChakraCore;
+
 
 namespace React.NETCoreSample
 {
@@ -31,6 +35,11 @@ namespace React.NETCoreSample
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddReact();
+
+            services.AddJsEngineSwitcher(options => options.DefaultEngineName = ChakraCoreJsEngine.EngineName)
+              .AddChakraCore();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -50,6 +59,14 @@ namespace React.NETCoreSample
             }
 
             app.UseHttpsRedirection();
+            app.UseReact(config =>
+            {
+                config
+                    .AddScriptWithoutTransform("~/dist/runtime.js")
+                    .AddScriptWithoutTransform("~/dist/vendor.js")
+                    .AddScriptWithoutTransform("~/dist/vendor.js");
+
+            });
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
