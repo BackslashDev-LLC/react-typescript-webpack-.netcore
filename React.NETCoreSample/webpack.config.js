@@ -2,7 +2,7 @@
 
 module.exports = {
     entry: {
-        components: './wwwroot/Views/react/expose-components.ts',
+        components: './wwwroot/react/expose-components.ts',
     },
     output: {
         filename: '[name].js',

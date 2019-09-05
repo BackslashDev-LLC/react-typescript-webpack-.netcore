@@ -64,7 +64,7 @@ namespace React.NETCoreSample
                 config
                     .AddScriptWithoutTransform("~/dist/runtime.js")
                     .AddScriptWithoutTransform("~/dist/vendor.js")
-                    .AddScriptWithoutTransform("~/dist/vendor.js");
+                    .AddScriptWithoutTransform("~/dist/components.js");
 
             });
             app.UseStaticFiles();

@@ -26,5 +26,3 @@ export default class TestComponent extends React.Component<Props, State>{
             );
     }
 }
-
-ReactDOM.render(<TestComponent />, document.getElementById('content'));

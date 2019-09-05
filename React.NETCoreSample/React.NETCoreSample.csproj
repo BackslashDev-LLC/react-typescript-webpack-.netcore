@@ -7,20 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\Views\react\expose-components.js" />
-    <Content Remove="wwwroot\Views\react\expose-components.ts" />
-    <Content Remove="wwwroot\Views\react\testComponent\test.js" />
-    <Content Remove="wwwroot\Views\react\testComponent\test.tsx" />
+    <Content Remove="wwwroot\react\expose-components.js" />
+    <Content Remove="wwwroot\react\expose-components.ts" />
+    <Content Remove="wwwroot\react\testComponent\test.js" />
+    <Content Remove="wwwroot\react\testComponent\test.tsx" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Views\react\expose-components.ts" />
-    <None Remove="Views\react\testComponent\test.tsx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\Views\react\expose-components.js" />
-    <None Include="wwwroot\Views\react\testComponent\test.js" />
+    <None Include="wwwroot\react\expose-components.js" />
+    <None Include="wwwroot\react\testComponent\test.js" />
   </ItemGroup>
 
 
@@ -36,10 +31,8 @@
 
 
   <ItemGroup>
-    <TypeScriptCompile Include="Views\react\expose-components.ts" />
-    <TypeScriptCompile Include="Views\react\testComponent\test.tsx" />
-    <TypeScriptCompile Include="wwwroot\Views\react\expose-components.ts" />
-    <TypeScriptCompile Include="wwwroot\Views\react\testComponent\test.tsx" />
+    <TypeScriptCompile Include="wwwroot\react\expose-components.ts" />
+    <TypeScriptCompile Include="wwwroot\react\testComponent\test.tsx" />
   </ItemGroup>
 
 </Project>

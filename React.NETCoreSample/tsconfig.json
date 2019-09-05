@@ -8,5 +8,5 @@
     "types": [ "./types" ],
     "lib": [ "es2015", "dom" ]
   },
-  "include": [ "./wwwroot/Views/react/**/*" ]
+  "include": [ "./wwwroot/react/**/*" ]
 }
